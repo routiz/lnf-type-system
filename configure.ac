@@ -1,26 +1,30 @@
-dnl Process this file with autoconf to produce a configure script.
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
 
-AC_PREREQ(2.59)
-AC_INIT(lnf-types, 1.0)
-AC_PROG_CC
+AC_PREREQ([2.69])
+AC_INIT([hnsproject], [0.0.1], [ryu.insang@gmail.com])
+AM_INIT_AUTOMAKE([-Wall -Werror gnits])
+AC_CONFIG_SRCDIR([include/lnf.h])
+AC_CONFIG_HEADERS([config.h])
 
-AC_CANONICAL_SYSTEM
+# Checks for programs.
+AC_PROG_CC_C99
 
-dnl Initialize automake
-AM_INIT_AUTOMAKE
-
-dnl this allows us specify individual liking flags for each target
-AM_PROG_CC_C_O 
-
-dnl Initialize Libtool
+# Initialize Libtool
+AC_CONFIG_MACRO_DIR([m4])
+AM_PROG_AR
 LT_INIT
 
-dnl Check if Libtool is present
-dnl Libtool is used for building share libraries 
-AC_PROG_LIBTOOL
+# Checks for libraries.
 
-AC_CONFIG_FILES(Makefile
-                exampleProgram/Makefile
-                lnf/Makefile
-                include/Makefile)
+# Checks for header files.
+
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+
+AC_CONFIG_FILES([Makefile
+                 include/Makefile
+                 src/Makefile])
+
 AC_OUTPUT

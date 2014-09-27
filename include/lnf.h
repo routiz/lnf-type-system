@@ -1,8 +1,11 @@
-#ifndef lnf_H
-#define lnf_H
+#ifndef __LNF_TYPE_H__
+#define __LNF_TYPE_H__
 
-#include "stdio.h"
+#define __LNF_TYPE_H_INSIDE__
 
-extern void print_hello ();
+#include "lnf-object.h"
+#include "lnf-slice.h"
 
-#endif
+#undef __LNF_TYPE_H_INSIDE__
+
+#endif // __LNF_TYPE_H__

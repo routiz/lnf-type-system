@@ -1,1 +1,2 @@
-SUBDIRS=lnf include exampleProgram
+SUBDIRS=src include
+ACLOCAL_AMFLAGS = -I m4
