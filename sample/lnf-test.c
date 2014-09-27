@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include "lnf-test.h"
-#include "lnf-type.h"
+#include "lnf.h"
 
 // Not thread safe
 lnf_slice TESTS = { 0 };
@@ -58,4 +58,10 @@ lnf_test_run (void)
     }
 
   _lnf_test_print ("TEST : Finished!\n");
+}
+
+int
+main (int argc, char** argv)
+{
+  return 0;
 }

@@ -28,6 +28,8 @@ lnf-types.anjuta
 m4/
 missing
 stamp-h1
+test-driver
+sample/lnf-sample
 
 # binaries
 *.la
