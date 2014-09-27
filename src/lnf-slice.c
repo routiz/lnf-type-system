@@ -20,7 +20,7 @@
 #include "lnf.h"
 
 lnf_slice *
-make_slice_from_len (size_t s, size_t len)
+lnf_make_slice_from_len (size_t s, size_t len)
 {
   lnf_slice *slice = (lnf_slice *) calloc (sizeof (lnf_slice), 1);
   lnf_slice_init (slice, s, len, len * 2);
@@ -29,7 +29,7 @@ make_slice_from_len (size_t s, size_t len)
 }
 
 lnf_slice *
-make_slice_from_len_and_cap (size_t s, size_t len, size_t cap)
+lnf_make_slice_from_len_cap (size_t s, size_t len, size_t cap)
 {
   lnf_slice *slice = (lnf_slice *) calloc (sizeof (lnf_slice), 1);
   lnf_slice_init (slice, s, len, cap);
@@ -38,7 +38,7 @@ make_slice_from_len_and_cap (size_t s, size_t len, size_t cap)
 }
 
 lnf_slice *
-make_slice_from_array (void *arr, size_t arrsize)
+lnf_make_slice_from_array (void *arr, size_t arrsize)
 {
   // TODO stub
   return 0;
