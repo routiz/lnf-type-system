@@ -1,6 +1,9 @@
-.project
-Makefile
-Makefile.in
+# backup files
+*~
+
+# auto generated files from build system
+**/Makefile
+**/Makefile.in
 aclocal.m4
 autom4te.cache/
 compile
@@ -10,18 +13,23 @@ config.status
 config.sub
 configure
 depcomp
-exampleProgram/.deps/
-exampleProgram/.libs/
-exampleProgram/Makefile
-exampleProgram/exampleProgram
-exampleProgram/exampleProgram-exampleProgram.o
-include/Makefile
 install-sh
 libtool
-lnf/.deps/
-lnf/.libs/
-lnf/Makefile
-lnf/liblnf.la
-lnf/liblnf_la-lnf.lo
-lnf/liblnf_la-lnf.o
+**/.deps/
+**/.libs/
 ltmain.sh
+m4
+.anjuta/
+.anjuta_sym_db.db
+ar-lib
+config.h
+config.h.in
+lnf-types.anjuta
+m4/
+missing
+stamp-h1
+
+# binaries
+*.la
+*.lo
+*.o
