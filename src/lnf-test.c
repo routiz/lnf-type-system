@@ -61,7 +61,7 @@ lnf_test_run (void)
 }
 
 int
-main (int argc, char** argv)
+main (int argc, char **argv)
 {
   return 0;
 }

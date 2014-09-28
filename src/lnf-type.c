@@ -25,7 +25,7 @@ lnf_interface_inherit (lnf_interface * interface, lnf_slice * parent)
 
 void
 lnf_object_declare_method (lnf_object * object, lnf_args_desc descriptor,
-                           void *func_ptr)
+			   void *func_ptr)
 {
 }
 
@@ -41,4 +41,3 @@ lnf_object_unref (lnf_object * object)
 {
   __sync_fetch_and_sub (&object->_ref_cnt, 1);
 }
-

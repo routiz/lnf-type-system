@@ -13,7 +13,7 @@ typedef struct _lnf_test lnf_test;
 struct _lnf_test
 {
   const char *name;
-  _Bool (*test_func) (void);
+    _Bool (*test_func) (void);
 };
 
 void lnf_test_register (lnf_test test);
