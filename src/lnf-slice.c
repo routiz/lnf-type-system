@@ -19,6 +19,11 @@
 
 #include "lnf.h"
 
+/**
+ * @param s sizeof slice type
+ * @param len length of the slice
+ * @return new slice pointer 
+ */
 lnf_slice *
 lnf_make_slice_from_len (size_t s, size_t len)
 {
@@ -31,6 +36,11 @@ lnf_make_slice_from_len (size_t s, size_t len)
 lnf_slice *
 lnf_make_slice_from_len_cap (size_t s, size_t len, size_t cap)
 {
+  if (len > cap) {
+    // TODO warn user
+    return NULL;
+  }
+
   lnf_slice *slice = (lnf_slice *) calloc (sizeof (lnf_slice), 1);
   lnf_slice_init (slice, s, len, cap);
 
@@ -47,22 +57,36 @@ lnf_make_slice_from_array (void *arr, size_t arrsize)
 void
 lnf_slice_init (lnf_slice * slice, size_t s, size_t len, size_t cap)
 {
+  slice->_data = calloc (s, len);
+  if (slice->_data == NULL)
+    {
+      return;
+    }
+
   slice->len = len;
   slice->cap = cap;
+
+  slice->size_of_type = s;
+}
+
+void
+lnf_slice_finalize (lnf_slice * slice)
+{
+  free (slice->_data);
+  slice->len = 0;
+  slice->cap = 0;
 }
 
 size_t
 lnf_slice_len (lnf_slice slice)
 {
-  // TODO stub
-  return 0;
+  return slice.len;
 }
 
 size_t
 lnf_slice_cap (lnf_slice slice)
 {
-  // TODO stub
-  return 0;
+  return slice.cap;
 }
 
 lnf_slice *
@@ -87,22 +111,21 @@ lnf_slice_reslice_tail (lnf_slice slice, size_t start)
 }
 
 lnf_slice *
-lnf_slice_slice_array (void *arr, size_t size_of_type, size_t start,
-                       size_t end)
+lnf_slice_array (void *arr, size_t size_of_type, size_t start, size_t end)
 {
   // TODO stub
   return 0;
 }
 
 lnf_slice *
-lnf_slice_slice_array_head (void *arr, size_t size_of_type, size_t end)
+lnf_slice_array_head (void *arr, size_t size_of_type, size_t end)
 {
   // TODO stub
   return 0;
 }
 
 lnf_slice *
-lnf_slice_slice_array_tail (void *arr, size_t size_of_type, size_t start)
+lnf_slice_array_tail (void *arr, size_t size_of_type, size_t start)
 {
   // TODO stub
   return 0;

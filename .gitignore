@@ -35,3 +35,8 @@ sample/lnf-sample
 *.la
 *.lo
 *.o
+
+# gtags
+GPATH
+GRTAGS
+GTAGS

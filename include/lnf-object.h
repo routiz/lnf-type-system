@@ -63,7 +63,7 @@ _Bool lnf_interface_inherit (lnf_interface * interface, lnf_slice * parent);
 
 void
 lnf_object_declare_method (lnf_object * object, lnf_args_desc descriptor,
-                           void *func_ptr);
+			   void *func_ptr);
 
 struct _lnf_object
 {
