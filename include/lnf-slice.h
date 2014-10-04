@@ -17,7 +17,7 @@ struct _lnf_slice
 lnf_slice *lnf_make_slice_from_len (size_t s, size_t len);
 lnf_slice *lnf_make_slice_from_len_cap (size_t s, size_t len, size_t cap);
 
-lnf_slice *lnf_make_slice_from_array (void *arr, size_t arrsize);
+lnf_slice *lnf_make_slice_from_array (void *arr, size_t typesize, size_t arrsize);
 
 void lnf_slice_init (lnf_slice * slice, size_t s, size_t len, size_t cap);
 void lnf_slice_finalize (lnf_slice * slice);

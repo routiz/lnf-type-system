@@ -59,7 +59,7 @@ _Bool lnf_interface_register (lnf_interface interface);
 
 _Bool lnf_interface_is_registered (lnf_interface interface);
 
-_Bool lnf_interface_inherit (lnf_interface * interface, lnf_slice * parent);
+_Bool lnf_interface_inherit (lnf_interface * interface, lnf_slice * parents);
 
 void
 lnf_object_declare_method (lnf_object * object, lnf_args_desc descriptor,
