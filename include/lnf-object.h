@@ -80,6 +80,10 @@ struct _lnf_object
   // reference count. Should be thread-safe.
   int _ref_cnt;
 };
+ 
+lnf_object *lnf_object_alloc ();
+
+lnf_object *lnf_object_init (lnf_object * object);
 
 void *lnf_object_ref (lnf_object * object);
 

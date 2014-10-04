@@ -6,13 +6,3 @@ lnf_sample_LDADD = $(top_srcdir)/src/liblnftype.la
 
 lnf_sample_SOURCES = \
 	lnf-sample.c
-
-
-# test
-#check_PROGRAMS = lnf-slice-test
-
-#lnf_slice_test_SOURCES = \
-#	lnf-slice-test.c \
-#	lnf-slice-test.h
-
-#TESTS = lnf-slice-test

@@ -12,5 +12,8 @@ main (int argc, char **argv)
 
   lnf_slice_finalize (&slice);
 
+  lnf_object * object = lnf_object_ref(lnf_object_init(lnf_object_alloc()));
+  lnf_object_unref (object);
+
   return 0;
 }
