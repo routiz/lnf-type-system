@@ -40,3 +40,8 @@ sample/lnf-sample
 GPATH
 GRTAGS
 GTAGS
+
+# IDE settings
+.cproject
+.project
+.settings
