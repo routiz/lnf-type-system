@@ -58,36 +58,36 @@ lnf_make_slice_from_array (void *arr, size_t typesize, size_t arrsize)
 void
 lnf_slice_init (lnf_slice * slice, size_t s, size_t len, size_t cap)
 {
-  slice->_data = calloc (s, len);
-  if (slice->_data == NULL)
+  slice->_slice_intl._data = calloc (s, len);
+  if (slice->_slice_intl._data == NULL)
     {
       return;
     }
 
-  slice->len = len;
-  slice->cap = cap;
+  slice->_slice_intl.len = len;
+  slice->_slice_intl.cap = cap;
 
-  slice->size_of_type = s;
+  slice->_slice_intl.size_of_type = s;
 }
 
 void
 lnf_slice_finalize (lnf_slice * slice)
 {
-  free (slice->_data);
-  slice->len = 0;
-  slice->cap = 0;
+  free (slice->_slice_intl._data);
+  slice->_slice_intl.len = 0;
+  slice->_slice_intl.cap = 0;
 }
 
 size_t
 lnf_slice_len (lnf_slice slice)
 {
-  return slice.len;
+  return slice._slice_intl.len;
 }
 
 size_t
 lnf_slice_cap (lnf_slice slice)
 {
-  return slice.cap;
+  return slice._slice_intl.cap;
 }
 
 lnf_slice *

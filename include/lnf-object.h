@@ -67,7 +67,12 @@ lnf_object_declare_method (lnf_object * object, lnf_args_desc descriptor,
 
 struct _lnf_object
 {
-  // TODO replace this with lnf_slice
+  // TODO slice should be 2 layered, which are raw C11 slice and
+  // lnf-object slice. raw C11 slice will be used by both lnf-object
+  // and lnf-object slice, because lnf-object slice should be lnf-object
+  // and slice at the same time.
+  // methods variable should be raw C11 slice.
+
   // I believe slice will be faster than hash table data structure in this case.
   // It should be rare care that an object has hundreds or thousands of
   // methods.

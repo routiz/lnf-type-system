@@ -8,10 +8,7 @@
 struct _lnf_slice
 {
   lnf_object _object;
-
-  size_t len, cap;
-  size_t size_of_type;
-  void *_data;
+  lnf_slice_intl _slice_intl;
 };
 
 lnf_slice *lnf_make_slice_from_len (size_t s, size_t len);

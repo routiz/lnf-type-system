@@ -8,7 +8,7 @@ main (int argc, char **argv)
   lnf_slice slice = { 0 };
   lnf_slice_init (&slice, sizeof (char), 10, 10);
   printf ("is size_of_type set properly : %d\n",
-	  (sizeof (char) == slice.size_of_type));
+	  (sizeof (char) == slice._slice_intl.size_of_type));
 
   lnf_slice_finalize (&slice);
 
