@@ -4,6 +4,7 @@
 #define __LNF_TYPE_H_INSIDE__
 
 #include "lnf-slice-intl.h"
+#include "lnf-string-intl.h"
 #include "lnf-object.h"
 #include "lnf-slice.h"
 

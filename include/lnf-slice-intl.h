@@ -2,7 +2,7 @@
 #define __LNF_SLICE_INTL_H__
 
 #ifndef __LNF_TYPE_H_INSIDE__
-#error You cannot include this. Please include lnf-type.h
+#error You cannot include this. Please include lnf.h
 #endif
 
 #include <stddef.h>
