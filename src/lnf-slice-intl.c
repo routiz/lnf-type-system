@@ -27,7 +27,8 @@
 lnf_slice_intl *
 lnf_make_slice_intl_from_len (size_t s, size_t len)
 {
-  lnf_slice_intl *slice = (lnf_slice_intl *) calloc (sizeof (lnf_slice_intl), 1);
+  lnf_slice_intl *slice =
+    (lnf_slice_intl *) calloc (sizeof (lnf_slice_intl), 1);
   lnf_slice_intl_init (slice, s, len, len * 2);
 
   return slice;
@@ -42,7 +43,8 @@ lnf_make_slice_intl_from_len_cap (size_t s, size_t len, size_t cap)
       return NULL;
     }
 
-  lnf_slice_intl *slice = (lnf_slice_intl *) calloc (sizeof (lnf_slice_intl), 1);
+  lnf_slice_intl *slice =
+    (lnf_slice_intl *) calloc (sizeof (lnf_slice_intl), 1);
   lnf_slice_intl_init (slice, s, len, cap);
 
   return slice;
@@ -91,49 +93,50 @@ lnf_slice_intl_cap (lnf_slice_intl slice)
 }
 
 lnf_slice_intl *
-lnf_slice_intl_reslice (lnf_slice_intl slice, size_t start, size_t end)
+lnf_intl_reslice (lnf_slice_intl slice, size_t start, size_t end)
 {
   // TODO stub
   return 0;
 }
 
 lnf_slice_intl *
-lnf_slice_intl_reslice_head (lnf_slice_intl slice, size_t end)
+lnf_intl_reslice_head (lnf_slice_intl slice, size_t end)
 {
   // TODO stub
   return 0;
 }
 
 lnf_slice_intl *
-lnf_slice_intl_reslice_tail (lnf_slice_intl slice, size_t start)
+lnf_intl_reslice_tail (lnf_slice_intl slice, size_t start)
 {
   // TODO stub
   return 0;
 }
 
 lnf_slice_intl *
-lnf_slice_intl_array (void *arr, size_t size_of_type, size_t start, size_t end)
+lnf_intl_slice_array (void *arr, size_t size_of_type, size_t start,
+		      size_t end)
 {
   // TODO stub
   return 0;
 }
 
 lnf_slice_intl *
-lnf_slice_intl_array_head (void *arr, size_t size_of_type, size_t end)
+lnf_intl_slice_array_head (void *arr, size_t size_of_type, size_t end)
 {
   // TODO stub
   return 0;
 }
 
 lnf_slice_intl *
-lnf_slice_intl_array_tail (void *arr, size_t size_of_type, size_t start)
+lnf_intl_slice_array_tail (void *arr, size_t size_of_type, size_t start)
 {
   // TODO stub
   return 0;
 }
 
 lnf_slice_intl *
-lnf_slice_intl_append (lnf_slice_intl slice1, lnf_slice_intl slice2)
+lnf_intl_slice_append (lnf_slice_intl slice1, lnf_slice_intl slice2)
 {
   // TODO stub
   return 0;
