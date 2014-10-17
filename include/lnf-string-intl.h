@@ -26,7 +26,7 @@ struct _lnf_string_intl
 
 void lnf_string_intl_init (lnf_string_intl *);
 
-void lnf_string_intl_init_from_arr (lnf_string_intl *, void*);
+void lnf_string_intl_init_from_arr (lnf_string_intl *, void *);
 
 void lnf_string_intl_init_from_arr_with_encoding (lnf_string_intl *, void *,
 						  lnf_string_encoding);
