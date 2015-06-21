@@ -1,0 +1,1 @@
+Lean and fast type system, inspired by Golang
