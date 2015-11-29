@@ -25,7 +25,7 @@
  * @return new slice pointer
  */
 lnf_slice_intl *
-lnf_make_slice_intl_from_len (size_t s, size_t len)
+lnf_make_slice_intl_len (size_t s, size_t len)
 {
   lnf_slice_intl *slice =
     (lnf_slice_intl *) calloc (sizeof (lnf_slice_intl), 1);
@@ -35,7 +35,7 @@ lnf_make_slice_intl_from_len (size_t s, size_t len)
 }
 
 lnf_slice_intl *
-lnf_make_slice_intl_from_len_cap (size_t s, size_t len, size_t cap)
+lnf_make_slice_intl_len_cap (size_t s, size_t len, size_t cap)
 {
   if (len > cap)
     {
@@ -51,7 +51,7 @@ lnf_make_slice_intl_from_len_cap (size_t s, size_t len, size_t cap)
 }
 
 lnf_slice_intl *
-lnf_make_slice_intl_from_array (void *arr, size_t typesize, size_t arrsize)
+lnf_make_slice_intl_array (void *arr, size_t typesize, size_t arrsize)
 {
   // TODO stub
   return 0;
