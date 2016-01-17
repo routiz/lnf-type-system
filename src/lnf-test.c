@@ -52,7 +52,7 @@ lnf_test_run (void)
       exit (EXIT_FAILURE);
     }
 
-  for (int i = 0; i < TESTS.len; i++)
+  for (int i = 0; i < lnf_slice_len(TESTS); i++)
     {
       _lnf_test_print ("TEST : Tes\n");
     }

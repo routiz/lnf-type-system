@@ -6,16 +6,16 @@
 
 #include "config.h"
 
-#include "lnf-test.h"
-#include "lnf-type.h"
-#include "lnf-logger.h"
+#include <lnf.h>
+#include <lnf-test.h>
+#include <lnf-logger.h>
 
 _Bool
 test_lnf_slice_len (void)
 {
   LNF_LOG ("TESTING :: lnf_slice_len");
 
-  lnf_slice *intslice = make_slice_from_len (sizeof (int), 20);
+  lnf_slice *intslice = lnf_make_slice_from_len (sizeof (int), 20);
   LNF_TEST_ASSERT (intslice != NULL, "TEST FAILED :: New slice is NULL\n\n");
 
   assert (lnf_slice_len (*intslice) == 0);
@@ -29,7 +29,7 @@ test_lnf_slice_cap (void)
 {
   LNF_LOG ("TESTING :: lnf_slice_cap");
 
-  lnf_slice *intslice = make_slice_from_len (sizeof (int), 20);
+  lnf_slice *intslice = lnf_make_slice_from_len (sizeof (int), 20);
   LNF_TEST_ASSERT (intslice != NULL, "TEST_FAILED :: New slice is NULL\n\n");
 
   assert (lnf_slice_cap (*intslice) == 0);
