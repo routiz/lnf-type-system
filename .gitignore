@@ -45,3 +45,9 @@ GTAGS
 .cproject
 .project
 .settings
+
+# Genereted while testing
+sample/lnf-slice-test
+*.log
+*.trs
+*.log
