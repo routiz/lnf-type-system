@@ -1,53 +1,37 @@
-# backup files
+# Binaries
+*.o
 *~
+**/liblnf.la
+**/lnf-slice.lo
 
-# auto generated files from build system
 **/Makefile
 **/Makefile.in
 aclocal.m4
 autom4te.cache/
 compile
-config.guess
+config.h
+config.h.in
 config.log
 config.status
-config.sub
 configure
 depcomp
 install-sh
-libtool
-**/.deps/
-**/.libs/
-ltmain.sh
-m4
-.anjuta/
-.anjuta_sym_db.db
-ar-lib
-config.h
-config.h.in
-lnf-types.anjuta
-m4/
 missing
+**/.deps/
+**/sample
 stamp-h1
+autoscan.log
+config.guess
+config.sub
+configure.scan
+ltmain.sh
+m4/
+include/lnf-types.h
+libtool
+**/.libs/
 test-driver
-sample/lnf-sample
+tests/test-slice
 
-# binaries
-*.la
-*.lo
-*.o
-
-# gtags
-GPATH
-GRTAGS
-GTAGS
-
-# IDE settings
-.cproject
-.project
-.settings
-
-# Genereted while testing
-sample/lnf-slice-test
-*.log
-*.trs
-*.log
+tests/test-slice.log
+tests/test-slice.trs
+tests/test-suite.log
