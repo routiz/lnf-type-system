@@ -17,7 +17,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "lnf.h"
+#include <lnf.h>
+
+#include "lnf-utils.h"
 
 /**
  * @param s sizeof slice type
@@ -93,48 +95,48 @@ lnf_slice_cap (lnf_slice slice)
 lnf_slice *
 lnf_slice_reslice (lnf_slice slice, size_t start, size_t end)
 {
-  // TODO stub
+  lnf_util_not_implemented ();
   return 0;
 }
 
 lnf_slice *
 lnf_slice_reslice_head (lnf_slice slice, size_t end)
 {
-  // TODO stub
+  lnf_util_not_implemented ();
   return 0;
 }
 
 lnf_slice *
 lnf_slice_reslice_tail (lnf_slice slice, size_t start)
 {
-  // TODO stub
+  lnf_util_not_implemented ();
   return 0;
 }
 
 lnf_slice *
 lnf_slice_array (void *arr, size_t size_of_type, size_t start, size_t end)
 {
-  // TODO stub
+  lnf_util_not_implemented ();
   return 0;
 }
 
 lnf_slice *
 lnf_slice_array_head (void *arr, size_t size_of_type, size_t end)
 {
-  // TODO stub
+  lnf_util_not_implemented ();
   return 0;
 }
 
 lnf_slice *
 lnf_slice_array_tail (void *arr, size_t size_of_type, size_t start)
 {
-  // TODO stub
+  lnf_util_not_implemented ();
   return 0;
 }
 
 lnf_slice *
 lnf_slice_append (lnf_slice slice1, lnf_slice slice2)
 {
-  // TODO stub
+  lnf_util_not_implemented ();
   return 0;
 }
